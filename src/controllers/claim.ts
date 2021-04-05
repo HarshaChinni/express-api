@@ -18,7 +18,7 @@ export async function createClaim(claimDetails: ClaimDetails) {
 }
 
 
-export const getClaimById = (claimId) => {
+export const getClaimById = (claimId: string) => {
     // Log Info statement
 
     // verify if the claimId is exists in the DB

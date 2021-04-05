@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 router.get('/:claimId', (req, res) => {
     const claimId = req.params.claimId;
 
-    if (!Number.isInteger(claimId)) {
+    if (Number.isInteger(claimId)) {
         res.status(422).send({
             message: 'The claim ID should be an integer',
             claim: {}

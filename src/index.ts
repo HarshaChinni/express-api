@@ -1,6 +1,8 @@
 import * as express from 'express';
 import { Request, Response } from 'express';
 
+import { claims } from './routes/cliam';
+
 const app = express();
 const {
     PORT = 3000,
@@ -11,6 +13,9 @@ app.get('/', (req: Request, res: Response) => {
         message: 'API index page',
     });
 });
+
+app.use('/claims', claims);
+
 app.listen(PORT, () => {
     console.log('server started at http://localhost:' + PORT);
 });
